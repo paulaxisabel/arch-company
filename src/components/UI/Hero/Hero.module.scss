@@ -1,0 +1,179 @@
+@use "../../../styles/mixins.scss" as mixins;
+
+.hero {
+  width: 100%;
+  height: 72rem;
+  position: relative;
+
+  @include mixins.respond(phone-lg) {
+    height: 56rem;
+  }
+
+  &__image {
+    width: 44%;
+    height: 100%;
+    background-size: cover;
+
+    @include mixins.respond(laptop) {
+      width: 60%;
+    }
+
+    @include mixins.respond(tablet) {
+      width: 100%;
+    }
+
+    @include mixins.respond(phone-lg) {
+      height: 24rem;
+    }
+  }
+
+  &__description {
+    width: 67.8%;
+    height: 50.3rem;
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    left: 33.5%;
+
+    @include mixins.respond(laptop) {
+      width: 55.86%;
+    }
+
+    @include mixins.respond(tablet) {
+      width: 80.53%;
+      left: 11.8rem;
+    }
+
+    @include mixins.respond(tablet-md) {
+      width: 94.53%;
+      left: 2.8rem;
+    }
+
+    @include mixins.respond(tablet-sm) {
+      width: 94%;
+      left: 2.8rem;
+    }
+
+    @include mixins.respond(phone-lg) {
+      width: 34.3rem;
+      left: 0;
+      height: 35rem;
+      bottom: unset;
+      top: 20rem;
+    }
+
+    & h1 {
+      position: absolute;
+      top: -9rem;
+      left: -2rem;
+
+      @include mixins.respond(desktop) {
+        font-size: 23rem;
+      }
+
+      @include mixins.respond(laptop) {
+        font-size: 21rem;
+      }
+
+      @include mixins.respond(laptop-sm) {
+        font-size: 18rem;
+      }
+
+      @include mixins.respond(tablet) {
+        font-size: 15.5rem;
+        left: 1rem;
+        right: 5rem;
+      }
+
+      @include mixins.respond(tablet-sm) {
+        font-size: 14.5rem;
+      }
+
+      @include mixins.respond(phone-lg) {
+        display: none;
+      }
+    }
+
+    & hr {
+      position: absolute;
+      background-color: #ccc;
+      border: none;
+      width: 8rem;
+      height: 1px;
+      top: 13.5rem;
+      left: 15.5rem;
+
+      @include mixins.respond(laptop) {
+        display: block;
+        top: 13.5rem;
+        left: 6.5rem;
+      }
+
+      @include mixins.respond(laptop-md) {
+        left: 4.5rem;
+      }
+
+      @include mixins.respond(tablet) {
+        top: 12rem;
+        left: 6.2rem;
+      }
+
+      @include mixins.respond(phone-lg) {
+        display: none;
+      }
+    }
+  }
+
+  &__text {
+    max-width: 44.6rem;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    flex-direction: column;
+    gap: 5.4rem;
+
+    @include mixins.respond(desktop) {
+      transform: translateX(-40%);
+    }
+
+    @include mixins.respond(laptop-sm) {
+      transform: translateX(-34%);
+    }
+
+    @include mixins.respond(tablet) {
+      transform: translateX(-43%);
+    }
+
+    @include mixins.respond(tablet-md) {
+      transform: translateX(-45%);
+    }
+
+    @include mixins.respond(tablet-sm) {
+      max-width: 32rem;
+      transform: translateX(-50%);
+    }
+
+    @include mixins.respond(phone-lg) {
+      bottom: unset;
+      top: 6rem;
+      width: 100%;
+      padding: 0 8.5%;
+      gap: 2rem;
+    }
+
+    & h3 {
+      @include mixins.respond(tablet-sm) {
+        font-size: 5.2rem;
+        line-height: 5.4rem;
+      }
+
+      @include mixins.respond(phone-lg) {
+        font-size: 4.8rem;
+        line-height: 5.2rem;
+      }
+    }
+  }
+}
